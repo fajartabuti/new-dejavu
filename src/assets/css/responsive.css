@@ -539,8 +539,8 @@
 		font-size: 20px;
 		line-height: 48px;
 		text-align: center;
-		background-color: #3786ff;
-		border: 1px solid #3786ff;
+		background-color: rgba(55, 225, 255, 0.8);
+		border: 1px solid rgba(55, 225, 255, 0.8);
 		margin-left: -25px;	
 	}
 }

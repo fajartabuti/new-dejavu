@@ -17,10 +17,12 @@ export class AppComponent implements OnInit{
   
   private loadScripts() {
     // You can load multiple scripts by just providing the key as argument into load method of the service
-    this.scriptLoader.load('jquery','popper.min','bootstrap.min','jquery-ui',
-    'jquery.fancybox','owl','appear','wow','scrollbar'
-    ,'script').then(data => {
+    this.scriptLoader.load('jquery','scrollbar','popper.min','bootstrap.min','jquery-ui',
+    'jquery.fancybox','owl','appear','wow','script')
+    .then(data => {
       // Script Loaded Successfully
     }).catch(error => console.log(error));
   }
+
+  
 }

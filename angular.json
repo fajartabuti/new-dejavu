@@ -46,9 +46,7 @@
               "src/assets/js/appear.js",
               "src/assets/js/wow.js",
               "src/assets/js/scrollbar.js",
-              "src/assets/js/script.js",
-              "src/assets/js/map-script.js",
-              "src/assets/js/validate.js"
+              "src/assets/js/script.js"
             ]
           },
           "configurations": {
