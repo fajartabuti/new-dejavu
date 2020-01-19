@@ -24,9 +24,32 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/bootstrap.css",
+              "src/assets/css/style.css",
+              "src/assets/css/responsive.css",
+              "src/assets/css/animate.css",
+              "src/assets/css/flaticon.css",
+              "src/assets/css/fontawesome-all.css",
+              "src/assets/css/hover.css",
+              "src/assets/css/jquery-ui.css",
+              "src/assets/css/jquery.fancybox.min.css",
+              "src/assets/css/owl.css",
+              "src/assets/css/scrollbar.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery.js",
+              "src/assets/js/popper.min.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/jquery-ui.js",
+              "src/assets/js/jquery.fancybox.js",
+              "src/assets/js/owl.js",
+              "src/assets/js/appear.js",
+              "src/assets/js/wow.js",
+              "src/assets/js/scrollbar.js",
+              "src/assets/js/script.js",
+              "src/assets/js/map-script.js",
+              "src/assets/js/validate.js"
+            ]
           },
           "configurations": {
             "production": {
