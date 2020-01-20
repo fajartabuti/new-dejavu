@@ -1,0 +1,41 @@
+<div class="page-wrapper">
+    <!-- Preloader -->
+    <div class="preloader"><div class="icon"></div></div>
+
+	<!--Page Title-->
+    <section class="page-banner" style="background-image:url(/assets/images/background/title-bg.jpg);">
+        <div class="auto-container">
+            <div class="inner-container clearfix">
+                <ul class="bread-crumb clearfix">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Faqs</li>
+                </ul>
+                <h1>Faqs</h1>
+            </div>
+        </div>
+    </section>
+    <!--End Page Title-->
+
+	<!-- Questions Section -->
+    <section class="questions-section">
+        <div class="auto-container">
+          
+          <!-- Inner Container -->
+          <div class="inner-container">
+            <div class="row clearfix">
+                <div *ngFor="let faqitem of faqitem" class="question-block col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner-box">
+                      <div class="icon-box">
+                        <span class="icon flaticon-question"></span>
+                      </div>
+                      <h3><a href="#">{{faqitem.Question}}</a></h3>
+                      <div class="text">{{faqitem.Answer}}</div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+	
+</div>
