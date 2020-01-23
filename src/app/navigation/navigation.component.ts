@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -7,9 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor() { }
+  public href: string = "";
+
+  constructor( private router: Router ) 
+  {
+    this.router.events.subscribe((e) => {
+      if (e instanceof NavigationEnd) {
+        if( e.url.includes("match")){
+          this.href = 'MATCHES';
+        }
+        if( e.url.includes("team")){
+          this.href = 'OUR TEAMS';
+        }
+        if( e.url.includes("about-us")){
+          this.href = 'ABOUT US';
+        }
+        if( e.url.includes("faq")){
+          this.href = 'FAQ\'S';
+        }
+        if( e.url.includes("contact")){
+          this.href = 'CONTACT';
+        }
+      }
+    });
+  }
 
   ngOnInit() {
   }
-
 }

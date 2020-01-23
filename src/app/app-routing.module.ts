@@ -6,6 +6,7 @@ import { HomeComponent} from './home/home.component';
 import { AboutUsComponent} from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { TeamComponent } from './team/team.component';
+import { MatchComponent } from './match/match.component';
 import { ScriptloaderService } from './scriptloader.service';
 import { Router, NavigationEnd } from '@angular/router';
 
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'team', component: TeamComponent },
+  { path: 'match', component: MatchComponent },
   { path: '',
     redirectTo: '/home',
     pathMatch: 'full'

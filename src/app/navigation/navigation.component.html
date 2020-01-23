@@ -17,6 +17,7 @@
             </div>
         </div>
     </div>
+
     <!-- Header Upper -->
     <div class="header-upper">
         <div class="inner-container">
@@ -44,7 +45,7 @@
                             <ul class="navigation pull-right clearfix">
                                 <li><a routerLink="about-us">About Us</a></li>
                                 <li><a routerLink="faq">Faq's</a></li>
-                                <li><a routerLink="contact">Contacts</a></li>
+                                <li><a routerLink="contact">Contact</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -91,5 +92,19 @@
             </div>
         </nav>
     </div><!-- End Mobile Menu -->
+
+    <!--Page Title-->
+    <section *ngIf="router.url != '/home'" class="page-banner" style="background-image:url(assets/images/background/title-bg.jpg);">
+        <div class="auto-container">
+            <div class="inner-container clearfix">
+                <ul class="bread-crumb clearfix">
+                    <li><a href="home">Home</a></li>
+                    <li>{{href}}</li>
+                </ul>
+                <h1>{{href}}</h1>
+            </div>
+        </div>
+    </section>
+    <!--End Page Title-->
 </header>
 <!-- End Main Header -->
