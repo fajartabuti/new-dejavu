@@ -7,11 +7,10 @@
         <div class="banner-carousel owl-theme owl-carousel">
             <div class="slide-item">
               <div class="image-layer" style="background-image:url(/assets/images/main-slider/1.jpg)"></div>
-  
                 <div class="auto-container">
                     <div class="content-box">
                         <h2>TEAM DEJAVU</h2>
-                        <div class="btn-box"><a href="about-me.html" class="theme-btn btn-style-one"><span class="btn-title">About Us</span></a></div>
+                        <div class="btn-box"><a routerLink="/about-us" class="theme-btn btn-style-one"><span class="btn-title">About Us</span></a></div>
                     </div>  
                 </div>
             </div>
@@ -21,7 +20,7 @@
                 <div class="auto-container">
                     <div class="content-box">
                         <h2>Match Videos</h2>
-                        <div class="btn-box"><a href="#" class="theme-btn btn-style-one"><span class="btn-title">Watch</span></a></div>
+                        <div class="btn-box"><a style="color: white;" (click)="toTop($event)" class="theme-btn btn-style-one"><span class="btn-title">Watch</span></a></div>
                     </div>  
                 </div>
             </div>
@@ -102,7 +101,11 @@
         <!-- Lower Box -->
         <div class="lower-box">
           <div class="text">Jika kamu sudah hidup didunia ini lebih dari 17 tahun dan memiliki DNA gamer didalam dirimu serta ingin memiliki tim yang solid dan mempunyai visi untuk terus berkembang, ini saat yang tepat untuk menjadi bagian dari tim ini.</div>
-          <a routerLink="/faq" class="theme-btn btn-style-one"><span class="btn-title">syarat & ketentuan</span></a>
+          <div class="scroll-to-top scroll-to-target" data-target="html">
+            <span routerLink="/faq" class="theme-btn btn-style-one">
+              <span class="btn-title">syarat & ketentuan</span>
+            </span>
+          </div>
         </div>
         
       </div>
@@ -114,7 +117,7 @@
       <div class="auto-container">
         <!-- Sec Title -->
         <div class="sec-title centered">
-          <div class="title">Our</div>
+          <div class="title" id="matchvideos">Our</div>
           <h2>Match Videos</h2>
         </div>
         
@@ -701,6 +704,29 @@
       </div>
     </section>
     <!-- End Matches Section -->
+
+    <!--Sponsors Section-->
+    <section class="sponsors-section">
+      <div class="auto-container">
+          
+          <div class="sponsors-outer">
+              <!--Sponsors Carousel-->
+              <ul class="sponsors-carousel owl-carousel owl-theme">
+                  <li class="slide-item"><figure class="image-box"><a href="#"><img src="assets/images/clients/1.png" alt=""></a></figure></li>
+                  <li class="slide-item"><figure class="image-box"><a href="#"><img src="assets/images/clients/2.png" alt=""></a></figure></li>
+                  <li class="slide-item"><figure class="image-box"><a href="#"><img src="assets/images/clients/3.png" alt=""></a></figure></li>
+                  <li class="slide-item"><figure class="image-box"><a href="#"><img src="assets/images/clients/1.png" alt=""></a></figure></li>
+                  <li class="slide-item"><figure class="image-box"><a href="#"><img src="assets/images/clients/2.png" alt=""></a></figure></li>
+                  <li class="slide-item"><figure class="image-box"><a href="#"><img src="assets/images/clients/3.png" alt=""></a></figure></li>
+                  <li class="slide-item"><figure class="image-box"><a href="#"><img src="assets/images/clients/1.png" alt=""></a></figure></li>
+                  <li class="slide-item"><figure class="image-box"><a href="#"><img src="assets/images/clients/2.png" alt=""></a></figure></li>
+                  <li class="slide-item"><figure class="image-box"><a href="#"><img src="assets/images/clients/3.png" alt=""></a></figure></li>
+              </ul>
+          </div>
+          
+      </div>
+    </section>
+    <!--End Sponsors Section-->
   
   </div>
   <!--End pagewrapper-->

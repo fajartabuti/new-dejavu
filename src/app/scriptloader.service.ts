@@ -15,6 +15,7 @@ export const ScriptStore: Scripts[] = [
   { name: 'appear', src: 'assets/js/appear.js' },
   { name: 'wow', src: 'assets/js/wow.js' },
   { name: 'scrollbar', src: 'assets/js/scrollbar.js' },
+  { name: 'validate', src: 'assets/js/validate.js' },
   { name: 'script', src: 'assets/js/script.js' }
 ];
 

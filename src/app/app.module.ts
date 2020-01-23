@@ -5,13 +5,19 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FaqComponent } from './faq/faq.component';
 import { HomeComponent } from './home/home.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactComponent } from './contact/contact.component';
+import { TeamComponent } from './team/team.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     FaqComponent,
-    HomeComponent
+    HomeComponent,
+    AboutUsComponent,
+    ContactComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
