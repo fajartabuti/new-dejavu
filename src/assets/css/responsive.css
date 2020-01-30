@@ -367,11 +367,12 @@
 	
 	.matches-block .match-column .match-item:first-child{
 		margin-bottom:70px;	
+		margin-left: auto;
 	}
 	
-	.matches-block .match-column .match-item:first-child::before{
-		top:auto;
-		bottom:-55px;
+	.matches-block .match-column .match-item:nth-child(2)::before{
+		top:-25px;
+		bottom:auto;
 		left:50%;
 		margin-left:-20px;	
 	}

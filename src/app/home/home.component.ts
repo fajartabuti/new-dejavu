@@ -6,11 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  
   ngOnInit() {
   }
 
-  toTop() {
-    document.getElementById("matchvideos").scrollIntoView();
+  scrollToVideos() {
+    document.getElementById('videosection').scrollIntoView();
+  }
+
+  scrollToMatches() {
+    document.getElementById('matchsection').scrollIntoView();
   }
 }

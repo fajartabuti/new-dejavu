@@ -20,7 +20,7 @@
                 <div class="auto-container">
                     <div class="content-box">
                         <h2>Match Videos</h2>
-                        <div class="btn-box"><a style="color: white;" (click)="toTop($event)" class="theme-btn btn-style-one"><span class="btn-title">Watch</span></a></div>
+                        <div class="btn-box"><a style="color: white;" (click)="scrollToVideos($event)" class="theme-btn btn-style-one"><span class="btn-title">Watch</span></a></div>
                     </div>  
                 </div>
             </div>
@@ -30,7 +30,7 @@
                 <div class="auto-container">
                     <div class="content-box">
                         <h2>Recent Match</h2>
-                        <div class="btn-box"><a href="#" class="theme-btn btn-style-one"><span class="btn-title">Detail</span></a></div>
+                        <div class="btn-box"><a style="color: white;" (click)="scrollToMatches($event)" class="theme-btn btn-style-one"><span class="btn-title">Detail</span></a></div>
                     </div>  
                 </div>
             </div>
@@ -56,8 +56,10 @@
               <div class="overlay-box">
                 <div class="overlay-inner">
                   <div class="content">
-                    <h3><a href="#">Call of Duty<br> Mobile</a></h3>
-                    <a href="about-clan.html" class="theme-btn btn-style-one"><span class="btn-title">Join Us</span></a>
+                    <h3><a>Call of Duty<br> Mobile</a></h3>
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=6281388869933&text=Hello%2c%20i%20want%20to%20join%20with%20dejavu%20on%20CODM%20DIVISION%0a%0aNick%20%3a%0aUmur%20%3a%0aDomisili%20%3a&source=&data=" class="theme-btn btn-style-one">
+                      <span class="btn-title">Join Us</span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -72,8 +74,10 @@
               <div class="overlay-box">
                 <div class="overlay-inner">
                   <div class="content">
-                    <h3><a href="#">Mobile <br> Legends</a></h3>
-                    <a href="about-clan.html" class="theme-btn btn-style-one"><span class="btn-title">Join Us</span></a>
+                    <h3><a>Mobile <br> Legends</a></h3>
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=6281388869933&text=Hello%2c%20i%20want%20to%20join%20with%20dejavu%20on%20ML%20DIVISION%0a%0aNick%20%3a%0aUmur%20%3a%0aDomisili%20%3a&source=&data=" class="theme-btn btn-style-one">
+                      <span class="btn-title">Join Us</span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -88,8 +92,10 @@
               <div class="overlay-box">
                 <div class="overlay-inner">
                   <div class="content">
-                    <h3><a href="#">Pro Evolution <br> Soccer</a></h3>
-                    <a href="about-clan.html" class="theme-btn btn-style-one"><span class="btn-title">Join Us</span></a>
+                    <h3><a>Pro Evolution <br> Soccer</a></h3>
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=6281388869933&text=Hello%2c%20i%20want%20to%20join%20with%20dejavu%20on%20PES%20DIVISION%0a%0aNick%20%3a%0aUmur%20%3a%0aDomisili%20%3a&source=&data=" class="theme-btn btn-style-one">
+                      <span class="btn-title">Join Us</span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -117,7 +123,7 @@
       <div class="auto-container">
         <!-- Sec Title -->
         <div class="sec-title centered">
-          <div class="title" id="matchvideos">Our</div>
+          <div class="title" id="videosection">Our</div>
           <h2>Match Videos</h2>
         </div>
         
@@ -194,6 +200,11 @@
     </section>
     <!-- End Gallery Section -->
   
+    <!-- Match Sec Title -->
+    <div style="margin-top: 60px; margin-bottom: 0;" class="sec-title centered">
+      <div class="title" id="matchsection">Our</div>
+      <h2>Matches</h2>
+    </div>
     <app-match></app-match>
 
     <!--Sponsors Section-->

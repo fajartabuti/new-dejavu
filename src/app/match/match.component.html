@@ -19,27 +19,23 @@
 					</ul>
 					
 					<!--Tabs Container-->
-					<div class="tabs-content">
+					<div class="tabs-content" style="overflow: auto; max-height: 1270px;">
 						
 						<!--Tab / Active Tab-->
 						<div class="tab active-tab" id="prod-all">
 							<div class="content">
 								
-								<!-- Matches Block -->
-								<div class="matches-block">
+								<!-- TEST Matches Block -->
+								<div class="matches-block" *ngFor="let match of MatchData">
 									<div class="inner-block">
 										<div class="row clearfix">
 											
 											<!-- Content Column -->
 											<div class="content-column col-lg-7 col-md-12 col-sm-12">
 												<div class="inner-column">
-													<ul class="tags">
-														<li>26 participants</li>
-														<li>Upcoming Matches</li>
-													</ul>
-													<div class="title">Watch Stream</div>
-													<h2><a href="matches-single.html">Need for speed Match part 2</a></h2>
-													<div class="date">30th MAY 2019, 11:00 PM</div>
+													<div class="title">{{match.division}} {{match.match_type}} Match</div>
+													<h2><a>{{match.match_title}}</a></h2>
+													<div class="date">{{match.match_date | date : "dd MMMM yyyy"}}</div>
 												</div>
 											</div>
 											
@@ -49,161 +45,21 @@
 													<div class="row clearfix">
 														
 														<!-- Match Item -->
-														<div class="match-item col-lg-6 col-md-6 col-sm-12">
+														<div [ngClass]="match.rival_logo == '' ? 'match-item centered-item col-lg-6 col-md-6 col-sm-12': 'match-item col-lg-6 col-md-6 col-sm-12'">
 															<div class="inner-item">
 																<div class="icon-box">
-																	<span class="icon flaticon-lion"></span>
-																</div>
-																<a href="#" class="product">Loin king</a>
-															</div>
-														</div>
-														
-														<!-- Match Item -->
-														<div class="match-item col-lg-6 col-md-6 col-sm-12">
-															<div class="inner-item">
-																<div class="icon-box">
-																	<span class="icon flaticon-wolf"></span>
-																</div>
-																<a href="#" class="product">Wolf Smart</a>
-															</div>
-														</div>
-														
-													</div>
-												</div>
-											</div>
-											
-										</div>
-									</div>
-								</div>
-								
-								<!-- Matches Block -->
-								<div class="matches-block">
-									<div class="inner-block">
-										<div class="row clearfix">
-											
-											<!-- Content Column -->
-											<div class="content-column col-lg-7 col-md-12 col-sm-12">
-												<div class="inner-column">
-													<ul class="tags">
-														<li>26 participants</li>
-														<li>Upcoming Matches</li>
-													</ul>
-													<div class="title">Recent Results  <span>.  40 : 32</span></div>
-													<h2><a href="matches-single.html">BACON TENDERLOIN DRUMSTICK MEATBALL</a></h2>
-													<div class="date">17th APRIL 2019, 11:00 PM</div>
-												</div>
-											</div>
-											
-											<!-- Match Column -->
-											<div class="match-column col-lg-5 col-md-12 col-sm-12">
-												<div class="inner-column">
-													<div class="row clearfix">
-														
-														<!-- Match Item -->
-														<div class="match-item col-lg-6 col-md-6 col-sm-12">
-															<div class="inner-item">
-																<div class="icon-box">
-																	<span class="icon flaticon-bull"></span>
-																</div>
-																<a href="#" class="product">bull eye</a>
-															</div>
-														</div>
-														
-														<!-- Match Item -->
-														<div class="match-item col-lg-6 col-md-6 col-sm-12">
-															<div class="inner-item">
-																<div class="icon-box">
-																	<span class="icon flaticon-playground"></span>
-																</div>
-																<a href="#" class="product">bull eye</a>
-															</div>
-														</div>
-														
-													</div>
-												</div>
-											</div>
-											
-										</div>
-									</div>
-								</div>
-								
-								<!-- Matches Block -->
-								<div class="matches-block">
-									<div class="inner-block">
-										<div class="row clearfix">
-											
-											<!-- Content Column -->
-											<div class="content-column col-lg-7 col-md-12 col-sm-12">
-												<div class="inner-column">
-													<div class="title">Recent Results</div>
-													<h2><a href="matches-single.html">resident evil final chapter battle</a></h2>
-													<div class="date">12th MAY 2019, 11:00 PM</div>
-												</div>
-											</div>
-											
-											<!-- Match Column -->
-											<div class="match-column col-lg-5 col-md-12 col-sm-12">
-												<div class="inner-column">
-													<div class="row clearfix">
-														
-														<!-- Match Item -->
-														<div class="match-item col-lg-6 col-md-6 col-sm-12">
-															<div class="inner-item">
-																<div class="icon-box">
-																	<span class="icon flaticon-skull"></span>
+																	<img src="assets/images/icons/djvu.png">
 																</div>
 															</div>
 														</div>
-														
-														
-													</div>
-												</div>
-											</div>
-											
-										</div>
-									</div>
-								</div>
-								
-								<!-- Matches Block -->
-								<div class="matches-block">
-									<div class="inner-block">
-										<div class="row clearfix">
-											
-											<!-- Content Column -->
-											<div class="content-column col-lg-7 col-md-12 col-sm-12">
-												<div class="inner-column">
-													<ul class="tags">
-														<li>26 participants</li>
-														<li>Upcoming Matches</li>
-													</ul>
-													<div class="title">Recent Results  <span>.  40 : 32</span></div>
-													<h2><a href="matches-single.html">justice league Matches of power</a></h2>
-													<div class="date">18th MAY 2019, 11:00 PM</div>
-												</div>
-											</div>
-											
-											<!-- Match Column -->
-											<div class="match-column col-lg-5 col-md-12 col-sm-12">
-												<div class="inner-column">
-													<div class="row clearfix">
-														
+
 														<!-- Match Item -->
-														<div class="match-item col-lg-6 col-md-6 col-sm-12">
+														<div *ngIf="match.rival_logo != ''" class="match-item col-lg-6 col-md-6 col-sm-12">
 															<div class="inner-item">
 																<div class="icon-box">
-																	<span class="icon flaticon-portrait"></span>
+																	<img [src]="match.rival_logo">
+																	<!-- <span class="icon flaticon-wolf"></span> -->
 																</div>
-																<a href="#" class="product">Cute cat</a>
-															</div>
-														</div>
-														
-														<!-- Match Item -->
-														<div class="match-item col-lg-6 col-md-6 col-sm-12">
-															<div class="inner-item">
-																<div class="icon-box">
-																	<span class="icon flaticon-bird"></span>
-																</div>
-																<a href="#" class="product">black crow</a>
 															</div>
 														</div>
 														
@@ -220,23 +76,21 @@
 						
 						<!--Tab-->
                         <div class="tab" id="prod-matches">
-							<div class="content">
-								
-								<!-- Matches Block -->
-								<div class="matches-block">
+							<div *ngIf="UpcomingMatchData?.length == 0" class="content">
+								<div style="color:rgba(55, 225, 255, 0.8); font-size: medium;">No Upcoming Matches</div>
+							</div>
+							<div *ngIf="UpcomingMatchData?.length >= 1" class="content">	
+								<!-- TEST Matches Block -->
+								<div class="matches-block" *ngFor="let match of UpcomingMatchData">
 									<div class="inner-block">
 										<div class="row clearfix">
 											
 											<!-- Content Column -->
 											<div class="content-column col-lg-7 col-md-12 col-sm-12">
 												<div class="inner-column">
-													<ul class="tags">
-														<li>26 participants</li>
-														<li>Upcoming Matches</li>
-													</ul>
-													<div class="title">Recent Results  <span>.  40 : 32</span></div>
-													<h2><a href="matches-single.html">BACON TENDERLOIN DRUMSTICK MEATBALL</a></h2>
-													<div class="date">17th APRIL 2019, 11:00 PM</div>
+													<div class="title">{{match.division}} {{match.match_type}} Match</div>
+													<h2><a>{{match.match_title}}</a></h2>
+													<div class="date">{{match.match_date | date : "dd MMMM yyyy"}}</div>
 												</div>
 											</div>
 											
@@ -246,124 +100,21 @@
 													<div class="row clearfix">
 														
 														<!-- Match Item -->
-														<div class="match-item col-lg-6 col-md-6 col-sm-12">
+														<div [ngClass]="match.rival_logo == '' ? 'match-item centered-item col-lg-6 col-md-6 col-sm-12': 'match-item col-lg-6 col-md-6 col-sm-12'">
 															<div class="inner-item">
 																<div class="icon-box">
-																	<span class="icon flaticon-bull"></span>
+																	<img src="assets/images/icons/djvu.png">
 																</div>
-																<a href="#" class="product">bull eye</a>
 															</div>
 														</div>
-														
+
 														<!-- Match Item -->
-														<div class="match-item col-lg-6 col-md-6 col-sm-12">
+														<div *ngIf="match.rival_logo != ''" class="match-item col-lg-6 col-md-6 col-sm-12">
 															<div class="inner-item">
 																<div class="icon-box">
-																	<span class="icon flaticon-playground"></span>
+																	<img [src]="match.rival_logo">
+																	<!-- <span class="icon flaticon-wolf"></span> -->
 																</div>
-																<a href="#" class="product">bull eye</a>
-															</div>
-														</div>
-														
-													</div>
-												</div>
-											</div>
-											
-										</div>
-									</div>
-								</div>
-								
-								<!-- Matches Block -->
-								<div class="matches-block">
-									<div class="inner-block">
-										<div class="row clearfix">
-											
-											<!-- Content Column -->
-											<div class="content-column col-lg-7 col-md-12 col-sm-12">
-												<div class="inner-column">
-													<ul class="tags">
-														<li>26 participants</li>
-														<li>Upcoming Matches</li>
-													</ul>
-													<div class="title">Recent Results</div>
-													<h2><a href="matches-single.html">resident evil final chapter battle</a></h2>
-													<div class="date">12th MAY 2019, 11:00 PM</div>
-												</div>
-											</div>
-											
-											<!-- Match Column -->
-											<div class="match-column col-lg-5 col-md-12 col-sm-12">
-												<div class="inner-column">
-													<div class="row clearfix">
-														
-														<!-- Match Item -->
-														<div class="match-item col-lg-6 col-md-6 col-sm-12">
-															<div class="inner-item">
-																<div class="icon-box">
-																	<span class="icon flaticon-skull"></span>
-																</div>
-																<a href="#" class="product">skeleton</a>
-															</div>
-														</div>
-														
-														<!-- Match Item -->
-														<div class="match-item col-lg-6 col-md-6 col-sm-12">
-															<div class="inner-item">
-																<div class="icon-box">
-																	<span class="icon flaticon-bear"></span>
-																</div>
-																<a href="#" class="product">bearmen</a>
-															</div>
-														</div>
-														
-													</div>
-												</div>
-											</div>
-											
-										</div>
-									</div>
-								</div>
-								
-								<!-- Matches Block -->
-								<div class="matches-block">
-									<div class="inner-block">
-										<div class="row clearfix">
-											
-											<!-- Content Column -->
-											<div class="content-column col-lg-7 col-md-12 col-sm-12">
-												<div class="inner-column">
-													<ul class="tags">
-														<li>26 participants</li>
-														<li>Upcoming Matches</li>
-													</ul>
-													<div class="title">Recent Results  <span>.  40 : 32</span></div>
-													<h2><a href="matches-single.html">justice league Matches of power</a></h2>
-													<div class="date">18th MAY 2019, 11:00 PM</div>
-												</div>
-											</div>
-											
-											<!-- Match Column -->
-											<div class="match-column col-lg-5 col-md-12 col-sm-12">
-												<div class="inner-column">
-													<div class="row clearfix">
-														
-														<!-- Match Item -->
-														<div class="match-item col-lg-6 col-md-6 col-sm-12">
-															<div class="inner-item">
-																<div class="icon-box">
-																	<span class="icon flaticon-portrait"></span>
-																</div>
-																<a href="#" class="product">Cute cat</a>
-															</div>
-														</div>
-														
-														<!-- Match Item -->
-														<div class="match-item col-lg-6 col-md-6 col-sm-12">
-															<div class="inner-item">
-																<div class="icon-box">
-																	<span class="icon flaticon-bird"></span>
-																</div>
-																<a href="#" class="product">black crow</a>
 															</div>
 														</div>
 														
@@ -382,21 +133,17 @@
                         <div class="tab" id="prod-results">
 							<div class="content">
 								
-								<!-- Matches Block -->
-								<div class="matches-block">
+								<!-- TEST Matches Block -->
+								<div class="matches-block" *ngFor="let match of RecentMatchData">
 									<div class="inner-block">
 										<div class="row clearfix">
 											
 											<!-- Content Column -->
 											<div class="content-column col-lg-7 col-md-12 col-sm-12">
 												<div class="inner-column">
-													<ul class="tags">
-														<li>26 participants</li>
-														<li>Upcoming Matches</li>
-													</ul>
-													<div class="title">Recent Results</div>
-													<h2><a href="matches-single.html">resident evil final chapter battle</a></h2>
-													<div class="date">12th MAY 2019, 11:00 PM</div>
+													<div class="title">{{match.division}} {{match.match_type}} Match</div>
+													<h2><a>{{match.match_title}}</a></h2>
+													<div class="date">{{match.match_date | date : "dd MMMM yyyy"}}</div>
 												</div>
 											</div>
 											
@@ -406,73 +153,21 @@
 													<div class="row clearfix">
 														
 														<!-- Match Item -->
-														<div class="match-item col-lg-6 col-md-6 col-sm-12">
+														<div [ngClass]="match.rival_logo == '' ? 'match-item centered-item col-lg-6 col-md-6 col-sm-12': 'match-item col-lg-6 col-md-6 col-sm-12'">
 															<div class="inner-item">
 																<div class="icon-box">
-																	<span class="icon flaticon-skull"></span>
+																	<img src="assets/images/icons/djvu.png">
 																</div>
-																<a href="#" class="product">skeleton</a>
 															</div>
 														</div>
-														
+
 														<!-- Match Item -->
-														<div class="match-item col-lg-6 col-md-6 col-sm-12">
+														<div *ngIf="match.rival_logo != ''" class="match-item col-lg-6 col-md-6 col-sm-12">
 															<div class="inner-item">
 																<div class="icon-box">
-																	<span class="icon flaticon-bear"></span>
+																	<img [src]="match.rival_logo">
+																	<!-- <span class="icon flaticon-wolf"></span> -->
 																</div>
-																<a href="#" class="product">bearmen</a>
-															</div>
-														</div>
-														
-													</div>
-												</div>
-											</div>
-											
-										</div>
-									</div>
-								</div>
-								
-								<!-- Matches Block -->
-								<div class="matches-block">
-									<div class="inner-block">
-										<div class="row clearfix">
-											
-											<!-- Content Column -->
-											<div class="content-column col-lg-7 col-md-12 col-sm-12">
-												<div class="inner-column">
-													<ul class="tags">
-														<li>26 participants</li>
-														<li>Upcoming Matches</li>
-													</ul>
-													<div class="title">Recent Results  <span>.  40 : 32</span></div>
-													<h2><a href="matches-single.html">justice league Matches of power</a></h2>
-													<div class="date">18th MAY 2019, 11:00 PM</div>
-												</div>
-											</div>
-											
-											<!-- Match Column -->
-											<div class="match-column col-lg-5 col-md-12 col-sm-12">
-												<div class="inner-column">
-													<div class="row clearfix">
-														
-														<!-- Match Item -->
-														<div class="match-item col-lg-6 col-md-6 col-sm-12">
-															<div class="inner-item">
-																<div class="icon-box">
-																	<span class="icon flaticon-portrait"></span>
-																</div>
-																<a href="#" class="product">Cute cat</a>
-															</div>
-														</div>
-														
-														<!-- Match Item -->
-														<div class="match-item col-lg-6 col-md-6 col-sm-12">
-															<div class="inner-item">
-																<div class="icon-box">
-																	<span class="icon flaticon-bird"></span>
-																</div>
-																<a href="#" class="product">black crow</a>
 															</div>
 														</div>
 														
