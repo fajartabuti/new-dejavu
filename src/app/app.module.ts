@@ -12,6 +12,7 @@ import { MatchComponent } from './match/match.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { ScriptloaderService } from './scriptloader.service';
 import { environment } from 'src/environments/environment';
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { environment } from 'src/environments/environment';
     AngularFireDatabaseModule,
     AngularFireStorageModule,
   ],
-  providers: [],
+  providers: [ScriptloaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

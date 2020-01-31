@@ -10,7 +10,7 @@ export class NavigationComponent implements OnInit {
 
   public href: string = "";
 
-  constructor( private router: Router ) 
+  constructor( public router: Router ) 
   {
     this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {

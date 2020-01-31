@@ -38,13 +38,12 @@ export class AppRoutingModule {
            this.loadScripts();
             // Function you want to call here
         }
-     });
-  }
+      });
+    }
 
   private loadScripts() {
     // You can load multiple scripts by just providing the key as argument into load method of the service
-    this.scriptLoader.load('jquery','owl','scrollbar','popper.min','bootstrap.min','jquery-ui',
-    'jquery.fancybox','appear','wow','validate','script')
+    this.scriptLoader.load('script')
     .then(data => {
       // Script Loaded Successfully
     }).catch(error => console.log(error));

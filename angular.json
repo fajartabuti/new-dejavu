@@ -37,6 +37,7 @@
               "src/assets/css/jquery.fancybox.min.css"
             ],
             "scripts": [
+              "src/assets/js/script.js"
             ]
           },
           "configurations": {
