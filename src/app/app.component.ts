@@ -8,9 +8,9 @@ import { Component, HostListener } from '@angular/core';
 export class AppComponent{
   title = 'new-dejavu';
 
-  @HostListener('contextmenu', ['$event'])
+  // @HostListener('contextmenu', ['$event'])
   
-  onRightClick(event) {
-    event.preventDefault();
-  }
+  // onRightClick(event) {
+  //   event.preventDefault();
+  // }
 }

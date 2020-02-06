@@ -139,6 +139,22 @@
 		display: none !important;
 	}
 
+	.main-header .header-top {
+        display: none !important;
+	}
+
+	.match-item .inner-item .icon-box {
+		padding: 30px 0;
+	}
+	
+	.icon-box img {
+		max-width: 70px;
+	}
+
+	.main-header .header-upper .logo img{
+		max-width: 170px;
+	}
+
 	.nav-outer .mobile-nav-toggler{
 		display: block;
 		margin: 0;
@@ -366,7 +382,11 @@
 	}
 	
 	.matches-block .match-column .match-item:first-child{
-		margin-bottom:70px;	
+		margin-left: auto;
+	}
+
+	.matches-block .match-column .match-item:nth-child(2){
+		margin-top:70px;	
 		margin-left: auto;
 	}
 	
