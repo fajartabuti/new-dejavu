@@ -381,20 +381,8 @@
 		font-size:30px;	
 	}
 	
-	.matches-block .match-column .match-item:first-child{
+	.matches-block .match-column .match-item{
 		margin-left: auto;
-	}
-
-	.matches-block .match-column .match-item:nth-child(2){
-		margin-top:70px;	
-		margin-left: auto;
-	}
-	
-	.matches-block .match-column .match-item:nth-child(2)::before{
-		top:-25px;
-		bottom:auto;
-		left:50%;
-		margin-left:-20px;	
 	}
 	
 	.matches-block .inner-block .content-column h2{
@@ -569,7 +557,7 @@
 @media only screen and (max-width: 479px) {
 
 	.pagination li {
-		font-size: 14px;
+		font-size: 16px;
 	}
 	
 	.sidebar .search-box{

@@ -2483,7 +2483,7 @@ img{
 ***/
 
 .overflow-tab {
-	overflow: auto; 
+	overflow-y: auto; 
 	max-height: 1270px;
 }
 
@@ -2721,9 +2721,9 @@ img{
 	padding-left:50px;
 }
 
-.matches-block .match-column .row{
+/* .matches-block .match-column .row{
 	margin:0px -50px;
-}
+} */
 
 .matches-block .match-column .match-item{
 	padding:0px 50px;
@@ -2735,7 +2735,7 @@ img{
 
 .matches-block .match-column .match-item:nth-child(2)::before{
 	position:absolute;
-	top:50%;
+	top:60%;
 	left:-20px;
 	content:'vs';
 	width:40px;
