@@ -29,7 +29,7 @@
 							<div *ngIf="UpcomingMatchData?.length == 0" class="content">
 								<div style="color:rgba(55, 225, 255, 0.8); font-size: medium;">No Upcoming Matches</div>
 							</div>
-							<div *ngIf="UpcomingMatchData?.length >= 1" class="content overflow-tab">
+							<div *ngIf="UpcomingMatchData?.length >= 1" class="content">
 								
 								<!-- TEST Matches Block -->
 								<div class="matches-block" *ngFor="let match of UpcomingItems">
@@ -85,7 +85,7 @@
 							<div class="center-pagination">
 								<jw-pagination [items]="MatchDataSort" [maxPages]="4" [pageSize]="5" (changePage)="onChangeAllMatchesPage($event)"></jw-pagination>
 							</div>
-							<div class="content overflow-tab">
+							<div class="content">
 								
 								<!-- TEST Matches Block -->
 								<div class="matches-block" *ngFor="let match of allItems">
@@ -138,7 +138,7 @@
 						
 						<!--Tab-->
                         <div class="tab" id="prod-results">
-							<div class="content overflow-tab">
+							<div class="content">
 								
 								<!-- TEST Matches Block -->
 								<div class="matches-block" *ngFor="let match of RecentMatchData">
