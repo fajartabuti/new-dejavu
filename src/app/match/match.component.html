@@ -13,20 +13,26 @@
 				
 					<!--Tab Btns-->
 					<ul class="tab-btns tab-buttons clearfix">
-						<li data-tab="#prod-all" class="tab-btn active-btn"><span>All Matches</span></li>
-						<li data-tab="#prod-matches" class="tab-btn"><span>Upcoming matches</span></li>
-						<li data-tab="#prod-results" class="tab-btn"><span>recent results</span></li>
+						<li data-tab="#prod-matches" class="tab-btn active-btn"><span>Upcoming Matches</span></li>
+						<li data-tab="#prod-results" class="tab-btn"><span>5 Recent Matches</span></li>
+						<li data-tab="#prod-all" class="tab-btn"><span>All Matches</span></li>
 					</ul>
 					
 					<!--Tabs Container-->
-					<div class="tabs-content" style="overflow: auto; max-height: 1270px;">
+					<div class="tabs-content">
 						
-						<!--Tab / Active Tab-->
-						<div class="tab active-tab" id="prod-all">
-							<div class="content">
+						<!--Tab-->
+                        <div class="tab active-tab" id="prod-matches">
+							<div class="center-pagination" [style.display]="hidePagination && 'none'">
+								<jw-pagination [items]="UpcomingMatchData" [maxPages]="4" [pageSize]="5" (changePage)="onChangeUpMatchesPage($event)"></jw-pagination>
+							</div>
+							<div *ngIf="UpcomingMatchData?.length == 0" class="content">
+								<div style="color:rgba(55, 225, 255, 0.8); font-size: medium;">No Upcoming Matches</div>
+							</div>
+							<div *ngIf="UpcomingMatchData?.length >= 1" class="content overflow-tab">
 								
 								<!-- TEST Matches Block -->
-								<div class="matches-block" *ngFor="let match of MatchData">
+								<div class="matches-block" *ngFor="let match of UpcomingItems">
 									<div class="inner-block">
 										<div class="row clearfix">
 											
@@ -73,15 +79,16 @@
 								
 							</div>
 						</div>
-						
+
 						<!--Tab-->
-                        <div class="tab" id="prod-matches">
-							<div *ngIf="UpcomingMatchData?.length == 0" class="content">
-								<div style="color:rgba(55, 225, 255, 0.8); font-size: medium;">No Upcoming Matches</div>
+						<div class="tab" id="prod-all">
+							<div class="center-pagination">
+								<jw-pagination [items]="MatchDataSort" [maxPages]="4" [pageSize]="5" (changePage)="onChangeAllMatchesPage($event)"></jw-pagination>
 							</div>
-							<div *ngIf="UpcomingMatchData?.length >= 1" class="content">	
+							<div class="content overflow-tab">
+								
 								<!-- TEST Matches Block -->
-								<div class="matches-block" *ngFor="let match of UpcomingMatchData">
+								<div class="matches-block" *ngFor="let match of allItems">
 									<div class="inner-block">
 										<div class="row clearfix">
 											
@@ -131,7 +138,7 @@
 						
 						<!--Tab-->
                         <div class="tab" id="prod-results">
-							<div class="content">
+							<div class="content overflow-tab">
 								
 								<!-- TEST Matches Block -->
 								<div class="matches-block" *ngFor="let match of RecentMatchData">

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database';
-import * as firebase from 'firebase/app';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import {formatDate } from '@angular/common';
 
 export interface Match {
@@ -20,16 +19,18 @@ export class MatchComponent implements OnInit {
 
   matchesRef: AngularFireList<any>;
   MatchData: any[];
+  hidePagination = false;
   UpcomingMatchData: any[];
   RecentMatchData: any[];
+  allItems: Array<any>;
+  UpcomingItems: Array<any>;
   today = new Date();
   todayFormated = formatDate(this.today, 'yyyy-MM-dd', 'en-US', '+0530');
   priorDate = new Date().setDate(this.today.getDate()-30);
   priortodayFormated = formatDate(this.priorDate, 'yyyy-MM-dd', 'en-US', '+0530');
+  MatchDataSort: any[];
 
-  constructor(private db: AngularFireDatabase){
-
-  }
+  constructor(private db: AngularFireDatabase){}
 
   ngOnInit() {
     this.matchesRef = this.db.list('matches-list', ref => {
@@ -44,17 +45,21 @@ export class MatchComponent implements OnInit {
         a['$key'] = item.key;
         this.MatchData.push(a as Match)
       })
-      // /* Data table */
-      // this.dataSource = new MatTableDataSource(this.MatchData);
-      // /* Pagination */
       setTimeout(() => {
-        this.MatchData = this.MatchData.sort((a, b) => new Date(b.match_date).getTime() - new Date(a.match_date).getTime())
-        this.UpcomingMatchData = this.MatchData.filter(item => item.match_date >= this.todayFormated);
-        this.RecentMatchData = this.MatchData.filter(item => item.match_date < this.todayFormated);
-        // this.dataSource.sort = this.sort;
-        // this.dataSource.paginator = this.paginator;
+        this.MatchDataSort = this.MatchData.sort((a, b) => new Date(b.match_date).getTime() - new Date(a.match_date).getTime())
+        this.UpcomingMatchData = this.MatchDataSort.filter(item => item.match_date >= this.todayFormated);
+        this.RecentMatchData = this.MatchDataSort.filter(item => item.match_date < this.todayFormated);
+        this.RecentMatchData.splice(5)
+        this.hidePagination = this.UpcomingMatchData.length < 5 ? true : false;
       }, 0);
     })
   }
 
+  onChangeAllMatchesPage(allItems: Array<any>) {
+    this.allItems = allItems;
+  }
+
+  onChangeUpMatchesPage(UpcomingItems: Array<any>) {
+    this.UpcomingItems = UpcomingItems;
+  }
 }

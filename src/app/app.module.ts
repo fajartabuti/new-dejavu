@@ -14,6 +14,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { ScriptloaderService } from './scriptloader.service';
 import { environment } from 'src/environments/environment';
+import { JwPaginationComponent } from 'jw-angular-pagination';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,8 @@ import { environment } from 'src/environments/environment';
     AboutUsComponent,
     ContactComponent,
     TeamComponent,
-    MatchComponent
+    MatchComponent,
+    JwPaginationComponent
   ],
   imports: [
     BrowserModule,
