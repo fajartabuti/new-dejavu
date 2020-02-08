@@ -2164,7 +2164,7 @@ img{
 .default-portfolio-item .overlay-inner h3{
 	position:relative;
 	color:#ffffff;
-	font-size:40px;
+	/* font-size:40px; */
 	line-height:1.2em;
 	font-weight:700;
 	margin-bottom: 10px;
@@ -2399,7 +2399,7 @@ img{
 
 .gallery-block-two .inner-box{
 	position:relative;
-	border:1px solid #26292e;
+	/* border:1px solid #26292e; */
 }
 
 .gallery-block-two .inner-box .image:before{

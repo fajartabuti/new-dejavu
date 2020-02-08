@@ -4,7 +4,10 @@
 	.page-wrapper{
 		overflow: hidden;
 	}
-	
+
+	.default-portfolio-item {
+		margin: 30px;
+	}
 }
 
 @media only screen and (max-width: 1600px){
@@ -35,7 +38,7 @@
 	
 	.default-portfolio-item .overlay-inner h3,
 	.gallery-block .inner-box .image .overlay-box h2{
-		font-size:36px;
+		font-size:20px;
 		line-height:1.2em;	
 	}
 	
@@ -47,7 +50,8 @@
 	}
 	
 	.gallery-block-two .inner-box .image .overlay-box h3{
-		padding:24px 30px;	
+		padding:24px 30px;
+		font-size: 20px;	
 	}
 	
 	.welcome-section-two .title-column .inner-column{
@@ -214,6 +218,12 @@
 		padding-left:0;	
 	}
 	
+	
+	.gallery-block-two .inner-box .image .overlay-box h3{
+		padding:20px 25px;
+		font-size: 16px;	
+	}
+
 	.questions-section .inner-container:before,
 	.questions-section .inner-container:after{
 		display:none;	
@@ -264,11 +274,6 @@
 	.comment-form .form-group .btn-title{
 		padding:12px 45px;
 		font-size:15px;	
-	}
-	
-	.default-portfolio-item .overlay-inner h3,
-	.gallery-block .inner-box .image .overlay-box h2{
-		font-size:30px;	
 	}
 	
 	.testimonial-block .inner-box .text{
@@ -379,6 +384,10 @@
 	
 	.facts-section .content h2{
 		font-size:30px;	
+	}
+
+	.default-portfolio-item {
+		margin: 30px 0;
 	}
 	
 	.matches-block .match-column .match-item{
@@ -566,5 +575,15 @@
 	
 	.sidebar-widget{
 		padding:30px 20px;	
+	}
+
+	.default-portfolio-item .overlay-inner h3,
+	.gallery-block .inner-box .image .overlay-box h2{
+		font-size:16px;
+	}
+	
+	.gallery-block-two .inner-box .image .overlay-box h3{
+		padding:5px 20px;
+		font-size: 12px;	
 	}
 }
