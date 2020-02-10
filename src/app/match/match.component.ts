@@ -25,16 +25,16 @@ export class MatchComponent implements OnInit {
   allItems: Array<any>;
   UpcomingItems: Array<any>;
   today = new Date();
-  todayFormated = formatDate(this.today, 'yyyy-MM-dd', 'en-US', '+0530');
+  todayFormatted = formatDate(this.today, 'yyyy-MM-dd', 'en-US', '+0530');
   priorDate = new Date().setDate(this.today.getDate()-30);
-  priortodayFormated = formatDate(this.priorDate, 'yyyy-MM-dd', 'en-US', '+0530');
+  priorTodayFormatted = formatDate(this.priorDate, 'yyyy-MM-dd', 'en-US', '+0530');
   MatchDataSort: any[];
 
   constructor(private db: AngularFireDatabase){}
 
   ngOnInit() {
     this.matchesRef = this.db.list('matches-list', ref => {
-      let q = ref.orderByChild('match_date').startAt(this.priortodayFormated);
+      let q = ref.orderByChild('match_date').startAt(this.priorTodayFormatted);
       return q;
     });
 
@@ -47,8 +47,8 @@ export class MatchComponent implements OnInit {
       })
       setTimeout(() => {
         this.MatchDataSort = this.MatchData.sort((a, b) => new Date(b.match_date).getTime() - new Date(a.match_date).getTime())
-        this.UpcomingMatchData = this.MatchDataSort.filter(item => item.match_date >= this.todayFormated);
-        this.RecentMatchData = this.MatchDataSort.filter(item => item.match_date < this.todayFormated);
+        this.UpcomingMatchData = this.MatchDataSort.filter(item => item.match_date >= this.todayFormatted);
+        this.RecentMatchData = this.MatchDataSort.filter(item => item.match_date < this.todayFormatted);
         this.RecentMatchData.splice(5)
         this.hidePagination = this.UpcomingMatchData.length < 5 ? true : false;
       }, 0);
