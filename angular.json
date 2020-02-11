@@ -37,6 +37,16 @@
               "src/assets/css/jquery.fancybox.min.css"
             ],
             "scripts": [
+              "src/assets/js/jquery.js",
+              "src/assets/js/popper.min.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/jquery-ui.js",
+              "src/assets/js/jquery.fancybox.js",
+              "src/assets/js/owl.js",
+              "src/assets/js/appear.js",
+              "src/assets/js/wow.js",
+              "src/assets/js/scrollbar.js",
+              "src/assets/js/validate.js",
               "src/assets/js/script.js"
             ]
           },
