@@ -3,39 +3,38 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { FaqComponent } from './faq/faq.component';
-import { HomeComponent } from './home/home.component';
-import { AboutUsComponent } from './about-us/about-us.component';
-import { ContactComponent } from './contact/contact.component';
-import { TeamComponent } from './team/team.component';
-import { MatchComponent } from './match/match.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
-import { ScriptloaderService } from './scriptloader.service';
 import { environment } from 'src/environments/environment';
-import { JwPaginationComponent } from 'jw-angular-pagination';
+import { HomeModule } from './home/home.module';
+import { MatchModule } from './match/match.module';
+import { AboutUsModule } from './about-us/about-us.module';
+import { ContactModule } from './contact/contact.module';
+import { FaqModule } from './faq/faq.module';
+import { TeamModule } from './team/team.module';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    FaqComponent,
-    HomeComponent,
-    AboutUsComponent,
-    ContactComponent,
-    TeamComponent,
-    MatchComponent,
-    JwPaginationComponent
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireStorageModule,
+    HomeModule,
+    MatchModule,
+    AboutUsModule,
+    ContactModule,
+    FaqModule,
+    TeamModule,
+    AppRoutingModule,
   ],
-  providers: [ScriptloaderService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

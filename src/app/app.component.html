@@ -1,53 +1,58 @@
-<app-navigation></app-navigation>
-<router-outlet></router-outlet>
+<div>
+    <router-outlet *ngIf="router.url == '/404'"></router-outlet>
+</div>
+<div *ngIf="router.url != '/404'">
+    <app-navigation></app-navigation>
+    <router-outlet></router-outlet>
 
-<!-- Main Footer -->
-<footer class="main-footer">
-    <div class="auto-container">
-        <!--Widgets Section-->
-        <div class="widgets-section">
-            <div class="row clearfix">
-                
-                <!--Column-->
-                <div class="column col-lg-4 col-md-6 col-sm-12">
-                    <div class="footer-widget logo-widget">
-                        <div class="logo">
-                            <a href="index.html"><img src="assets/images/logo.png" alt="" style="max-width: 200px;"></a>
-                        </div>
-                        <div class="text">Gamers Don't Die, They Respawn.</div>
-                    </div>
-                </div>
-                
-                <!--Column-->
-                <div class="column col-lg-4 col-md-6 col-sm-12">
-                    <div class="footer-widget newsletter-widget">
-                        <div class="footer-title">
-                            <h2>If you need something, Contact Us</h2>
-                        </div>
-                        <div class="text">Email : contact@teamdejavu.net<br>Phone : +6281388869933 </div>
-                            <a target="_blank" href="https://www.facebook.com/dejavuesport/"><span style="margin-right: 20px; color: grey;" class="fab fa-facebook-square"></span></a>
-                            <a target="_blank" href="https://www.instagram.com/dejavu_esport/"><span style="margin-right: 20px; color: grey;" class="fab fa-instagram"></span></a>
-                            <a target="_blank" href="https://www.youtube.com/channel/UCTZfgd7w768YAbMcQbit91A"><span style="margin-right: 20px; color: grey;" class="fab fa-youtube"></span></a>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-    
-    <!-- Footer Bottom -->
-    <div class="footer-bottom">
+    <!-- Main Footer -->
+    <footer class="main-footer">
         <div class="auto-container">
-            <!--Scroll to top-->
-            <div class="scroll-to-top scroll-to-target" data-target="html"><span class="flaticon-up-arrow"></span></div>
-            <!--Scroll to top-->
-            <div class="row clearfix">
-                <!-- Column -->
-                <div class="column col-lg-6 col-md-12 col-sm-12">
-                    <div class="copyright">&copy; Copyrights, 2019 All Rights Reserved Gamon Template</div>
+            <!--Widgets Section-->
+            <div class="widgets-section">
+                <div class="row clearfix">
+                    
+                    <!--Column-->
+                    <div class="column col-lg-4 col-md-6 col-sm-12">
+                        <div class="footer-widget logo-widget">
+                            <div class="logo">
+                                <a href="index.html"><img src="assets/images/logo.png" alt="" style="max-width: 200px;"></a>
+                            </div>
+                            <div class="text">Gamers Don't Die, They Respawn.</div>
+                        </div>
+                    </div>
+                    
+                    <!--Column-->
+                    <div class="column col-lg-4 col-md-6 col-sm-12">
+                        <div class="footer-widget newsletter-widget">
+                            <div class="footer-title">
+                                <h2>If you need something, Contact Us</h2>
+                            </div>
+                            <div class="text">Email : contact@teamdejavu.net<br>Phone : +6281388869933 </div>
+                                <a target="_blank" href="https://www.facebook.com/dejavuesport/"><span style="margin-right: 20px; color: grey;" class="fab fa-facebook-square"></span></a>
+                                <a target="_blank" href="https://www.instagram.com/dejavu_esport/"><span style="margin-right: 20px; color: grey;" class="fab fa-instagram"></span></a>
+                                <a target="_blank" href="https://www.youtube.com/channel/UCTZfgd7w768YAbMcQbit91A"><span style="margin-right: 20px; color: grey;" class="fab fa-youtube"></span></a>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
-    </div>
-    
-</footer>
+        
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="auto-container">
+                <!--Scroll to top-->
+                <div class="scroll-to-top scroll-to-target" data-target="html"><span class="flaticon-up-arrow"></span></div>
+                <!--Scroll to top-->
+                <div class="row clearfix">
+                    <!-- Column -->
+                    <div class="column col-lg-6 col-md-12 col-sm-12">
+                        <div class="copyright">&copy; Copyrights, 2019 All Rights Reserved Gamon Template</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+</div>
