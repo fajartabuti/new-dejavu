@@ -25,7 +25,7 @@
             ],
             "styles": [
               "src/assets/css/bootstrap.css",
-              "src/assets/css/style.css",
+              "src/styles.css",
               "src/assets/css/responsive.css",
               "src/assets/css/owl.css",
               "src/assets/css/scrollbar.css",
