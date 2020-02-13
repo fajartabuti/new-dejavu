@@ -34,7 +34,8 @@ export class MatchComponent implements OnInit {
 
   ngOnInit() {
     this.matchesRef = this.db.list('matches-list', ref => {
-      let q = ref.orderByChild('match_date').startAt(this.priorTodayFormatted);
+      // let q = ref.orderByChild('match_date').startAt(this.priorTodayFormatted);
+      let q = ref.orderByChild('match_date');
       return q;
     });
 
@@ -47,7 +48,7 @@ export class MatchComponent implements OnInit {
       })
       setTimeout(() => {
         this.MatchDataSort = this.MatchData.sort((a, b) => new Date(b.match_date).getTime() - new Date(a.match_date).getTime())
-        this.UpcomingMatchData = this.MatchDataSort.filter(item => item.match_date >= this.todayFormatted);
+        this.UpcomingMatchData = this.MatchDataSort.filter(item => item.match_date >= this.todayFormatted).sort((a, b) => new Date(a.match_date).getTime() - new Date(b.match_date).getTime());
         this.RecentMatchData = this.MatchDataSort.filter(item => item.match_date < this.todayFormatted);
         this.RecentMatchData.splice(5)
         this.hidePagination = this.UpcomingMatchData.length < 5 ? true : false;
