@@ -13,6 +13,7 @@ import { AboutUsModule } from './about-us/about-us.module';
 import { ContactModule } from './contact/contact.module';
 import { FaqModule } from './faq/faq.module';
 import { TeamModule } from './team/team.module';
+import { TournamentModule } from './tournament/tournament.module';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
@@ -32,6 +33,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     ContactModule,
     FaqModule,
     TeamModule,
+    TournamentModule,
     AppRoutingModule,
   ],
   providers: [],

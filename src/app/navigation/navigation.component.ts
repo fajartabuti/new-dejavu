@@ -20,6 +20,9 @@ export class NavigationComponent implements OnInit {
         if( e.url.includes("team")){
           this.href = 'OUR TEAMS';
         }
+        if( e.url.includes("tournament")){
+          this.href = 'TOURNAMENTS';
+        }
         if( e.url.includes("about-us")){
           this.href = 'ABOUT US';
         }

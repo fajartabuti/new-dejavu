@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'contact', loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule) },
   { path: 'faq', loadChildren: () => import('./faq/faq.module').then(m => m.FaqModule) },
   { path: 'team', loadChildren: () => import('./team/team.module').then(m => m.TeamModule) },
+  { path: 'tournament', loadChildren: () => import('./tournament/tournament.module').then(m => m.TournamentModule) },
   { path: '404', component: PagenotfoundComponent },
   { path: '',
     redirectTo: '/home',
