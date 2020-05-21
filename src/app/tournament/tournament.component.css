@@ -1,0 +1,23 @@
+.card {
+    background-color: transparent;
+}
+
+a  {     
+    color: rgba(55, 225, 255, 0.8);    
+}
+
+a:hover  {     
+    color: white;    
+}
+
+a:focus  {     
+    color: white;    
+}
+
+.card-header {
+    background-color: #151313;
+}
+
+.card-body {
+    padding: 10px 0 10px 0;
+}
