@@ -10,6 +10,8 @@ export class TournamentComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+      document.getElementById("finaltab").click();
   }
 
+  
 }
